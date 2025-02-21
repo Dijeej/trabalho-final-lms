@@ -1,0 +1,16 @@
+/* 
+    abaixo sao variaveis com as cores que vao ser utilizadas nos componentes do site
+    caso nao saiba como chamar:
+    .classe-exemplo {
+        background-color: var(--cor-pri);
+        color: var(--cor-sec);
+    }
+*/
+
+:root{
+    --cor-pri: #9fc8b6;
+    --cor-sec: #5e6a40;
+    --cor-ter: #e19e06;
+    --cor-qua: #b54427;
+    --cor-qui: #bba445;
+}
