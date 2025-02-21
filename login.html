@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Nome da Página</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <h1>Nome da Página</h1>
-    </header>
-    <div class="container">
-        <h2>Cadastro</h2>
-        <form action="#" method="POST">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" required>
-            
-            <label for="confirmar-senha">Confirmar Senha</label>
-            <input type="password" id="confirmar-senha" name="confirmar-senha" required>
-            
-            <button type="submit">Cadastrar</button>
-        </form>
-        <div class="social-login">
-            <p>Ou cadastre-se com</p>
-            <button class="google-btn"><i class="fab fa-google"></i> Google</button>
-            <button class="facebook-btn"><i class="fab fa-facebook"></i> Facebook</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro - Nome da Página</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <!--Nao consegui fazer o homepage funcionar aquinao encontrei o motivo, 
+            todas as outras paginas funcionam, coloquei href como solucao provisoria-->
+            <h1 class="homepage"><a href="main.html" style="text-decoration: none;">Nome da Página</a></h1>
+        </header>
+        <div class="container">
+            <h2>Cadastro</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+                
+                <label for="confirmar-senha">Confirmar Senha</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+            <div class="social-login">
+                <p>Ou cadastre-se com</p>
+                <button class="google-btn"><i class="fab fa-google"></i> Google</button>
+                <button class="facebook-btn"><i class="fab fa-facebook"></i> Facebook</button>
+            </div>
         </div>
-    </div>
-</body>
+        <script src="js/main.js"></script>
+    </body>
 </html>
