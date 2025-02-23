@@ -81,7 +81,7 @@ body {
     font-size: 16px;
     color: var(--cor-sec);
 }
-.perfilBotao {
+.perfil-botao {
     width: 50px;
     height: 50px;
     margin-right: 3%;
@@ -97,17 +97,17 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.perfilIcone {
+.perfil-icone {
     font-size: 35px; 
     color: var(--cor-sec);
 }
 
-.perfilBotao:hover {
+.perfil-botao:hover {
     border-radius: 50%; 
     background-color: var(--cor-sec); 
 }
 
-.perfilBotao:hover i {
+.perfil-botao:hover i {
     color: var(--cor-pri);
 }
 /* Barra de Navegacao */
@@ -159,7 +159,47 @@ body {
 .perfil-dropdown:hover .perfil-dropdown-content {
     display: block;
 }
-
+.perfil-dropdown-content p {
+    font-size: 14px; 
+    font-weight: bold;
+    margin: 5% 0 5% 0;
+}
+.perfil-dropdown-email {
+    border-radius: 16px;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+.perfil-dropdown-senha {
+    border-radius: 16px;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+.perfil-dropdown-btn-login {
+    border-radius: 16px;
+    width: 100%;
+    border: none;
+    color: var(--cor-sec);
+    font-weight: bold;
+    background-color: var(--cor-qui);
+}
+.perfil-dropdown-btn {
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.perfil-dropdown-cadastro {
+    background-color: var(--cor-pri);
+    border: none;
+    text-decoration: none;
+    padding: 2px 4px;
+    color: var(--cor-sec);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 16px;
+}
 /*Conteudo Lateral*/
 .side-content {
     background-color: var(--cor-pri);
@@ -315,8 +355,51 @@ body {
     width: 100%;
     background-color: var(--cor-pri);
     padding: 20px;
-    text-align: justify;
 }
-.footer-content > h4 {
+.footer-main h3 {
     color: var(--cor-sec);
+    border-bottom: 2px solid rgba(var(--cor-sec-rgb), 0.5);
+    padding-bottom: 0.5%;
+    width: 20%;
+}
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: baseline;
+}
+.footer-content div {
+    font-size: 11px;
+    margin-right: 2%;
+    margin-top: 3%;
+    border-right: 2px solid var(--cor-sec);
+    padding-right: 20px;
+}
+.footer-content div > h4 {
+    color: var(--cor-sec);
+    margin-bottom: 1%;
+}
+.footer-content div > p {
+    text-align: left;
+}
+
+/*Pagina de receita*/
+.info-receita {
+    margin-top: 2%;
+    display: flex; /* Flexbox para os itens dentro da div info */
+    justify-content: start; /* Alinha os itens à direita */
+    gap: 10px; /* Espaço entre os ícones e texto */
+}
+.info-receita > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight:600;
+    background-color: var(--cor-qui);
+}
+.info-receita span i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }

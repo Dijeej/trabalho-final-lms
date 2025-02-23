@@ -22,7 +22,7 @@ function adicionarRedirecionamentoImg() {
     });
 }
 function adicionarRedirecionamentoPerfil() {
-    let perfis = document.getElementsByClassName("perfilIcone");
+    let perfis = document.getElementsByClassName("perfil-icone");
     for (let perfil of perfis) {
         perfil.onclick = function() {
             window.location.href = "perfil.html";
