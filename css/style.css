@@ -1,16 +1,322 @@
-/* 
-    abaixo sao variaveis com as cores que vao ser utilizadas nos componentes do site
-    caso nao saiba como chamar:
-    .classe-exemplo {
-        background-color: var(--cor-pri);
-        color: var(--cor-sec);
-    }
-*/
-
-:root{
+:root {
     --cor-pri: #9fc8b6;
+    --cor-pri-rgb: 159, 200, 182;
     --cor-sec: #5e6a40;
+    --cor-sec-rgb: 94, 106, 64;
     --cor-ter: #e19e06;
+    --cor-ter-rgb: 225, 158, 6;
     --cor-qua: #b54427;
+    --cor-qua-rgb: 181, 68, 39; 
     --cor-qui: #bba445;
+    --cor-qui-rgb: 187, 164, 69;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+
+/*Icones*/
+.fa-heart {
+    color: var(--cor-qua);
+}
+.fa-clock {
+    color: var(--cor-sec);
+}
+/*Cabecalho do site*/
+.homepage {
+    cursor: pointer;
+}
+.header-main {
+    background-color: var(--cor-pri);
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    height: 60px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header-main > h1 {
+    color: var(--cor-sec);
+    margin: 0; 
+    font-size: 24px;
+}
+
+#form-pesquisa {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.barra-pesquisa {
+    border: none;
+    border-radius: 50px; 
+    padding: 10px 45px 10px 15px;
+    width: 1000px; 
+    outline: none; 
+    font-size: 16px;
+}
+
+.btn-pesquisa {
+    position: absolute;
+    right: 15px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-pesquisa > i {
+    font-size: 16px;
+    color: var(--cor-sec);
+}
+.perfilBotao {
+    width: 50px;
+    height: 50px;
+    margin-right: 3%;
+    background-color: var(--cor-pri);
+    border: 2px solid var(--cor-sec); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.perfilIcone {
+    font-size: 35px; 
+    color: var(--cor-sec);
+}
+
+.perfilBotao:hover {
+    border-radius: 50%; 
+    background-color: var(--cor-sec); 
+}
+
+.perfilBotao:hover i {
+    color: var(--cor-pri);
+}
+/* Barra de Navegacao */
+.nav-bar {
+    margin-top: 60px;
+    width: 100%;
+    left: 0;
+    border-bottom: 2px solid var(--cor-sec);
+}
+.nav-bar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex; 
+    justify-content: space-evenly;
+    width: 100%; 
+    font-weight: bold;
+}
+.nav-bar > ul > li > a {
+    display: block;
+    color: var(--cor-sec);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-bar > ul > li > a:hover {
+    text-decoration:underline;
+}
+
+/*Dropdown Perfil*/
+.perfil-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.perfil-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-sec);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    font-size: 16px;
+    z-index: 1;
+    top: 100%;
+    left: 5%;
+    transform: translateX(-50%);
+}
+.perfil-dropdown:hover .perfil-dropdown-content {
+    display: block;
+}
+
+/*Conteudo Lateral*/
+.side-content {
+    background-color: var(--cor-pri);
+    width: 25%;
+    float: right;
+    height: 600px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items:center;
+    align-content: space-evenly;
+    margin-top: 2%;
+    overflow: auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adicionando sombra */
+}
+
+.side-content > h2 {
+    color: var(--cor-sec);
+    text-align: center;
+    border-bottom: 2px solid rgba(var(--cor-sec-rgb), 0.6);
+    margin-bottom: 3%;
+    margin-top: 2%;
+    position: sticky;
+    top: 0; 
+    background-color: var(--cor-pri); 
+    z-index: 1;
+}
+.side-content > div {
+    background-color: var(--cor-ter);
+    width: 90%;
+    padding: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2%;
+}
+.side-content > div > h3 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+.side-content > div > p {
+    text-align: center;
+    font-size: small;
+    font-weight: 500;
+    
+}
+.side-content > div > h3 > a {
+    text-decoration: none;
+    color: var(--cor-sec);
+}
+.side-content > div > h3 > a:hover {
+    text-decoration: underline;
+}
+.info {
+    margin-top: 2%;
+    display: flex; /* Flexbox para os itens dentro da div info */
+    justify-content: space-around; /* Alinha os itens à direita */
+    gap: 10px; /* Espaço entre os ícones e texto */
+}
+.info > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight:600;
+    background-color: var(--cor-qui);
+}
+.num-curtida {
+    color: var(--cor-qua);
+}
+.num-tempo {
+    color: var(--cor-sec);
+}
+.info span i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Conteudo principal */
+.main-content {
+    width: 75%; 
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+.main-content > h2 {
+    color: var(--cor-sec);
+    width: 20%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    border-bottom: 2px solid var(--cor-pri);
+    font-size: xx-large;
+}
+.lista-receitas-content {
+    margin-bottom: 4%;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: 300px; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.card h4 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card .info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/*Rodape*/
+.footer-main {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-pri);
+    padding: 20px;
+    text-align: justify;
+}
+.footer-content > h4 {
+    color: var(--cor-sec);
 }

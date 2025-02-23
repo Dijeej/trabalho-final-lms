@@ -9,16 +9,29 @@
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
+        <header class="header-main">
             <h1 class="homepage">Nome da Página</h1>
             <form id="form-pesquisa" action="lista_receitas.html" method="GET">
-                <input type="text" id="input-pesquisa" name="pesquisa" placeholder="Pesquise uma receita...">
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" class="barra-pesquisa" id="input-pesquisa" name="pesquisa" placeholder="Pesquise uma receita...">
+                <button type="submit" class="btn-pesquisa"><i class="fas fa-search"></i></button>
             </form>
-            <img class="perfilIcone" src="img/profile-icon.jpg" alt="Perfil"/>
+            <div class="perfil-dropdown">
+                <button class="perfilBotao">
+                    <i class="fas fa-user perfilIcone"></i>
+                </button>
+                <div class="perfil-dropdown-content">
+                    <input type="email" name="email" placeholder="email"/>
+                    <input type="password" name="senha" placeholder="senha"/>
+                    <button>Login</button>
+                    <p>Entre com:</p>
+                    <button><i class="fa-brands fa-google"></i></button>
+                    <button><i class="fa-brands fa-facebook"></i></button>
+                    <p>Não tem conta?<a href="login.html">Cadastre-se</a></p>
+                </div>
+            </div>
         </header>
         
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href="lista_receitas.html">Saladas</a></li>
                 <li><a href="lista_receitas.html">Sobremesas</a></li>
@@ -30,49 +43,173 @@
             </ul>
         </nav>
         
-        <main>
-            <aside class="sidebar">
+        <main class="">
+            <aside class="side-content">
                 <h2>Receitas Mais Curtidas</h2>
-                <div class="card">
-                    <h3><a href="receita.html">Nome da Receita</a></h3>
-                    <p>Ingrediente 1, Ingrediente 2, Ingrediente 3, Ingrediente 4</p>
+                <div>
+                    <h3><a href="receita.html">Estrogonofe Light de Frango </a></h3>
+                    <p>Peito de Frango • Iourgute Natural • Cebola • Alho</p>
                     <div class="info">
-                        <span><i class="fas fa-heart"></i> 150</span>
-                        <span><i class="fas fa-clock"></i> 30 min</span>
+                        <span class="num-curtida"><i class="fas fa-heart"></i> 150</span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 30 min</span>
                     </div>
                 </div>
-                <div class="card">
-                    <h3><a href="receita.html">Nome da Receita</a></h3>
-                    <p>Ingrediente 1, Ingrediente 2, Ingrediente 3, Ingrediente 4</p>
+                <div>
+                    <h3><a href="receita.html">Bolo de Tapioca</a></h3>
+                    <p>Tapioca Granulada • Leite Condensado Light • Leite de Coco</p>
                     <div class="info">
-                        <span><i class="fas fa-heart"></i> 200</span>
-                        <span><i class="fas fa-clock"></i> 40 min</span>
+                        <span class="num-curtida"><i class="fas fa-heart"></i> 200</span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 40 min</span>
+                    </div>
+                </div>
+                <div>
+                    <h3><a href="receita.html">Empadão de Grão de Bico</a></h3>
+                    <p>Tapioca Granulada • Leite Condensado Light • Leite de Coco</p>
+                    <div class="info">
+                        <span class="num-curtida"><i class="fas fa-heart"></i> 400</span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 2h 30 min</span>
+                    </div>
+                </div>
+                <div>
+                    <h3><a href="receita.html">Omelete de talos e ramas</a></h3>
+                    <p>Grão de bico • Frango • Palmito • Alho</p>
+                    <div class="info">
+                        <span class="num-curtida"><i class="fas fa-heart"></i> 226</span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 25 min</span>
                     </div>
                 </div>
             </aside>
             
-            <section class="">
+            <section class="main-content">
                 <h2>Últimas Receitas</h2>
-                <div class="">
-                    <img class="linkImg" src="img/imagem.jpg" alt="Receita">
-                    <h3><a href="receita.html">Nome da Receita</a></h3>
-                    <p>Ingrediente 1, Ingrediente 2</p>
-                    <div class="">
-                        <span><i class="fas fa-heart"></i> 120</span>
-                        <span><i class="fas fa-clock"></i> 25 min</span>
+                <div class="card-container">
+                    <div class="card">
+                        <img class="linkImg" src="img/bolo-tapioca.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 120</span>
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                        </div>
                     </div>
-                </div>
-                <div class="">
-                    <img class="linkImg" src="img/imagem.jpg" alt="Receita">
-                    <h3><a href="receita.html">Nome da Receita</a></h3>
-                    <p>Ingrediente 1, Ingrediente 2</p>
-                    <div class="info">
-                        <span><i class="fas fa-heart"></i> 90</span>
-                        <span><i class="fas fa-clock"></i> 35 min</span>
+                    <div class="card">
+                        <img class="linkImg" src="img/estrogonofe-frango.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 155</span>
+                            <span><i class="fas fa-clock"></i> 60 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/empadao-frango-massa-grao-de-bico.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 113</span>
+                            <span><i class="fas fa-clock"></i> 1h 30 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/panqueca-de-banana.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 82</span>
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/bolo-tapioca.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 120</span>
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/estrogonofe-frango.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 155</span>
+                            <span><i class="fas fa-clock"></i> 60 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/empadao-frango-massa-grao-de-bico.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 113</span>
+                            <span><i class="fas fa-clock"></i> 1h 30 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/panqueca-de-banana.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 82</span>
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/bolo-tapioca.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 120</span>
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/estrogonofe-frango.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 155</span>
+                            <span><i class="fas fa-clock"></i> 60 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/empadao-frango-massa-grao-de-bico.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 113</span>
+                            <span><i class="fas fa-clock"></i> 1h 30 min</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="linkImg" src="img/panqueca-de-banana.jpg" alt="Receita">
+                        <h4><a href="receita.html">Nome da Receita</a></h4>
+                        <p>Ingrediente 1, Ingrediente 2</p>
+                        <div class="info">
+                            <span><i class="fas fa-heart"></i> 82</span>
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+        <footer class="footer-main">
+            <div class="footer-content">
+                <h4>Sobre Nós</h4>
+                <p>Nosso objetivo é proporcionar a você receitas saudáveis, práticas e acessíveis, com foco em promover uma alimentação equilibrada e de fácil acesso. Acreditamos que todos têm o direito de comer bem, independentemente do orçamento ou da rotina. Através de nossos conteúdos, buscamos não apenas inspirar novas experiências culinárias, mas também educar sobre os benefícios de uma alimentação consciente e nutritiva.</p>
+                <h4>Missão</h4>
+                <p>Nossa missão é democratizar a alimentação saudável, oferecendo receitas acessíveis e de baixo custo, utilizando ingredientes simples, fáceis de encontrar e com grande valor nutricional. Queremos ajudar a transformar hábitos alimentares, promovendo qualidade de vida e saúde para todos.</p>
+                <h4> Compromisso com a Sustentabilidade </h4>
+                <p>Além de promover a saúde, nosso compromisso é com o meio ambiente. Por isso, priorizamos o uso de alimentos locais e sazonais em nossas receitas, incentivando escolhas sustentáveis que impactam positivamente tanto sua saúde quanto o planeta.</p>
+                <h4> Nosso Impacto Social </h4>
+                <p>Acreditamos que a alimentação é uma ferramenta poderosa para a transformação social. Ao fornecer receitas saudáveis e acessíveis, esperamos contribuir para uma melhoria contínua no bem-estar de comunidades e indivíduos, especialmente aqueles que enfrentam dificuldades para acessar alimentos nutritivos e de qualidade.</p>
+                <h4>Participe de Nosso Projeto de Extensão</h4>
+                <p>Nosso site é um projeto de extensão universitária desenvolvido por estudantes e professores, com o objetivo de unir o conhecimento acadêmico à prática social. Junte-se a nós, compartilhe suas receitas, suas experiências e ajude a expandir o alcance deste projeto, impactando ainda mais pessoas com informações valiosas sobre alimentação saudável.</p>
+                <h4>Entre em Contato</h4>
+                <p>Tem alguma dúvida, sugestão ou quer compartilhar uma receita? Entre em contato conosco e vamos conversar! Estamos aqui para ouvir você e continuar criando um espaço que promova saúde e bem-estar para todos.</p>
+            </div>
+        </footer>
         <script src="js/main.js"></script>
     </body>
 </html>
