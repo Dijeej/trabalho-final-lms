@@ -11,8 +11,8 @@ function validarFormularioPesquisa() {
     });
 }
 function adicionarRedirecionamentoImg() {
-    // Seleciona todas as imagens com a classe "linkImg"
-    let imagens = document.querySelectorAll(".linkImg");
+    // Seleciona todas as imagens com a classe "link-img"
+    let imagens = document.querySelectorAll(".link-img");
 
     // Adiciona um evento de clique para cada uma delas
     imagens.forEach(function(imagem) {
