@@ -11,6 +11,8 @@
     --cor-qui-rgb: 255, 204, 63;
     --cor-ses: #FFFFFF;
     --cor-ses-rgb: 255, 255, 255;
+    --facebook-blue: #3b5998;
+    --google-red: #dc4e41;
 }
 
 
@@ -43,8 +45,6 @@ body {
     align-items: center; 
     justify-content: space-between;
     padding: 15px 15px;
-    /* padding-left: 100px;
-    padding-right: 100px; */
     width: 100%;
     height: 60px; 
     position: fixed;
@@ -58,7 +58,9 @@ body {
     margin: 0; 
     font-size: 20px;
 }
-
+.header-main > h1 a{
+    color: var(--cor-ses);
+}
 #form-pesquisa {
     position: relative;
     display: flex;
@@ -518,6 +520,104 @@ body {
 .card-foto-perfil img {
     max-width: 200px;
     max-height: 200px;
+}
+
+/*Pagina de Cadastro*/
+.header-cadastro {
+    align-content: center;
+    justify-content: center;
+}
+.cadastro-body {
+    background-image: url('../img/background-cadastro.jpg'); /* Substitua pelo caminho correto */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    width: 100%;
+    height: 100vh; /* Garante que ocupe toda a altura da tela */
+}
+.cadastro-content {
+    margin-top: 8%;
+    width: 50%;
+    margin-left: 38%;
+}
+.cadastro-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    height: 400px;
+    width: 350px;
+    background-color: var(--cor-sec);
+    /* box-shadow: 20px 20px 20px rgba(var(--cor-pri-rgb),1); */
+    border-radius: 15px ;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    color: var(--cor-ses);
+}
+.cadastro-container::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* Distância maior para destacar */
+    left: 55%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    width: 360px; /* Ligeiramente maior que o container */
+    height: 390px; /* Altura da sombra */
+    background-color: var(--cor-pri); /* Cor sólida */
+    border-radius: 10px;
+    z-index: -1;
+    /* opacity: 0.5; Deixa a sombra mais suave */
+}
+.cadastro-container h2{
+    margin-bottom:5%;
+}
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+.cadastro-form label{
+    margin-bottom: 2%;
+}
+.cadastro-form input{
+    font-size: medium;
+    margin-bottom: 2%;
+    border-radius: 16px;
+    border: none;
+}
+.cadastro-form button{
+    font-weight: bold;
+}
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--cor-ter);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cadastro-form button:hover {
+    background-color: #db6e00;
+}
+.cadastro-social { 
+    font-weight: bold;
+}
+.cadastro-social button{ 
+    font-weight: bold;
+}
+.cadastro-social .google-btn {
+    background-color: var(--google-red);
+    /* font-weight: bold; */
+}
+.cadastro-social .facebook-btn {
+    background-color: var(--facebook-blue);
 }
 /*Rodape*/
 .footer-main {

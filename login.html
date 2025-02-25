@@ -11,35 +11,23 @@
                 padding: 0;
                 background-color: #f8f8f8;
             } */
-            header {
+            /* header {
                 background-color: #9fcab7;
                 color: white;
                 padding: 15px;
                 font-size: 24px;
-            }
-            main {
+            } */
+            /* main {
                 display: flex;
                 flex-direction: column;
                 padding: 20px;
-            }
-            img {
+            } */
+            /* img {
                 width: 300px;
                 border-radius: 10px;
                 box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            }
-            button {
-                margin-top: 15px;
-                padding: 10px 20px;
-                font-size: 16px;
-                border: none;
-                background-color: #fb7e00;
-                color: white;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-            button:hover {
-                background-color: #db6e00;
-            }
+            } */
+            
             footer {
                 margin-top: 20px;
                 background-color: #f4f4f4;
@@ -49,38 +37,40 @@
                 padding-right: 300px;
             }
         </style>
-        <title>Receitas - NutriFácil</title>
+        <title>Cadastro - NutriFácil</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header>
+    <body class="cadastro-body">
+        <header class="header-main header-cadastro">
             <!--Nao consegui fazer o homepage funcionar aquinao encontrei o motivo, 
             todas as outras paginas funcionam, coloquei href como solucao provisoria-->
             <h1 class="homepage"><a href="main.html" style="text-decoration: none;">NutriFácil</a></h1>
         </header>
-        <div class="container">
-            <h2>Cadastro</h2>
-            <form action="#" method="POST">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
-                
-                <label for="confirmar-senha">Confirmar Senha</label>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
-                
-                <button type="submit">Cadastrar</button>
-            </form>
-            <div class="social-login">
-                <p>Ou cadastre-se com</p>
-                <button class="google-btn"><i class="fab fa-google"></i> Google</button>
-                <button class="facebook-btn"><i class="fab fa-facebook"></i> Facebook</button>
+        <div class="cadastro-content">
+            <div class="cadastro-container">
+                <h2>Cadastrar</h2>
+                <form action="main.html" method="POST" class="cadastro-form">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+                    
+                    <button class="btn" type="submit">Cadastrar</button>
+                </form>
+                <div class="cadastro-social">
+                    <p>Ou cadastre-se com</p>
+                    <button class="btn google-btn"><i class="fab fa-google"></i> Google</button>
+                    <button class="btn facebook-btn"><i class="fab fa-facebook"></i> Facebook</button>
+                </div>
             </div>
         </div>
         <script src="js/main.js"></script>
