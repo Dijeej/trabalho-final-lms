@@ -349,12 +349,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .card img {
     width: 100%;
-    height: 70%;
+    height: 60%;
     border-radius: 5px;
 }
 
@@ -393,7 +393,6 @@ body {
     width: 80%;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
 }
 .receita-container {
     margin-left: 4%;
@@ -437,6 +436,89 @@ body {
 .info-receita span i {
     margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }
+/*Pagina de Perfil*/
+.perfil-content {
+    margin-top: 8%;
+    width: 90%;
+}
+.perfil-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: flex-start;
+}
+.perfil-imagem img{
+    min-width: 200px;
+    
+    height: 100%;
+}
+.perfil-box {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+/*Navegacao do perfil*/
+.perfil-info ul {
+    /* width: 100%; */
+    color: gray;
+    list-style-type: none;
+    margin-top: 40%;
+    margin-left: 30%;
+}
+.perfil-info ul > li {
+    margin-bottom: 20%;
+}
+.perfil-bio {
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.perfil-bio h3 {
+    color: var(--cor-ter);
+    padding-bottom: 2% ;
+    margin-bottom: 2%;
+    border-bottom: 2px solid var(--cor-ter);
+}
+.perfil-bio p {
+    color: gray;
+}
+
+.perfil-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-top: 5%;
+}
+.perfil-nav li {
+    display: inline;
+}
+.perfil-nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: var(--cor-qua);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--cor-ter);
+    font-weight: bold;
+}
+.perfil-nav a.active {
+    background: var(--cor-ter);
+    color: var(--cor-qua);
+}
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+.tab-content.active {
+    display: block;
+}
+.tab-content h2 {
+    color: var(--cor-ter);
+}
+.card-foto-perfil img {
+    max-width: 200px;
+    max-height: 200px;
+}
 /*Rodape*/
 .footer-main {
     bottom: 0;
@@ -449,10 +531,11 @@ body {
     padding-right: 100px;
 }
 .footer-main h3 {
-    color: var(--cor-sec);
-    border-bottom: 2px solid rgba(var(--cor-sec-rgb), 0.5);
+    color: var(--cor-pri);
+    margin-top: 3%;
+    border-bottom: 2px solid rgba(var(--cor-pri-rgb), 0.5);
     padding-bottom: 0.5%;
-    width: 20%;
+    width: 50%;
 }
 .footer-content {
     display: flex;
@@ -465,11 +548,11 @@ body {
     font-size: 11px;
     margin-right: 2%;
     margin-top: 5%;
-    border-right: 2px solid var(--cor-sec);
+    border-right: 2px solid var(--cor-pri);
     padding-right: 20px;
 }
 .footer-content div > h4 {
-    color: var(--cor-sec);
+    color: var(--cor-pri);
     font-size: 14px;
     font-weight: bolder;
     margin-bottom: 2%;
