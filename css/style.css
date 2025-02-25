@@ -3,12 +3,14 @@
     --cor-pri-rgb: 159, 200, 182;
     --cor-sec: #5e6a40;
     --cor-sec-rgb: 94, 106, 64;
-    --cor-ter: #e19e06;
-    --cor-ter-rgb: 225, 158, 6;
-    --cor-qua: #b54427;
-    --cor-qua-rgb: 181, 68, 39; 
-    --cor-qui: #bba445;
-    --cor-qui-rgb: 187, 164, 69;
+    --cor-ter: #f87e04;
+    --cor-ter-rgb: 248, 126, 4;
+    --cor-qua: #d2dfd2;
+    --cor-qua-rgb: 210, 223, 210; 
+    --cor-qui: #ffcc43;
+    --cor-qui-rgb: 255, 204, 67;
+    --cor-ses: #ffffff;
+    --cor-ses-rgb: 255, 255, 255;
 }
 
 
@@ -18,12 +20,15 @@
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
 }
 
 /*Icones*/
 .fa-heart {
-    color: var(--cor-qua);
+    color: var(--cor-ter);
 }
 .fa-clock {
     color: var(--cor-sec);
@@ -37,7 +42,9 @@ body {
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 15px 15px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
     width: 100%;
     height: 60px; 
     position: fixed;
@@ -47,9 +54,9 @@ body {
 }
 
 .header-main > h1 {
-    color: var(--cor-sec);
+    color: var(--cor-ses);
     margin: 0; 
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #form-pesquisa {
@@ -166,29 +173,45 @@ body {
 }
 .perfil-dropdown-email {
     border-radius: 16px;
-    width: 100%;
+    font-size: 16px;
+    margin-bottom: 5%;
+    width: 90%;
     text-align: center;
     border: none;
 }
 .perfil-dropdown-senha {
     border-radius: 16px;
+    font-size: 16px;
     text-align: center;
-    width: 100%;
+    width: 90%;
     border: none;
 }
 .perfil-dropdown-btn-login {
-    border-radius: 16px;
-    width: 100%;
+    margin-top: 6%;
+    font-size: 16px;
+    width: 90%;
     border: none;
+    border-radius: 16px;
     color: var(--cor-sec);
     font-weight: bold;
     background-color: var(--cor-qui);
+    cursor: pointer;
 }
 .perfil-dropdown-btn {
+    text-align: center;
     border: none;
+    background-color: var(--cor-ter);
+    color: var(--cor-ses);
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.perfil-dropdown-btn:hover {
+    background-color: #db6e00;
+}
+.perfil-dropdown-btn-login:hover {
+    background-color: #db6e00;
 }
 .perfil-dropdown-cadastro {
     background-color: var(--cor-pri);
@@ -200,9 +223,12 @@ body {
     font-size: 14px;
     border-radius: 16px;
 }
+.perfil-dropdown-cadastro:hover {
+    background-color: #db6e00;
+}
 /*Conteudo Lateral*/
 .side-content {
-    background-color: var(--cor-pri);
+    background-color: var(--cor-qui);
     width: 25%;
     float: right;
     height: 600px;
@@ -226,12 +252,11 @@ body {
     margin-bottom: 3%;
     margin-top: 2%;
     position: sticky;
-    top: 0; 
-    background-color: var(--cor-pri); 
+    top: 0;
     z-index: 1;
 }
 .side-content > div {
-    background-color: var(--cor-ter);
+    background-color: var(--cor-ses);
     width: 90%;
     padding: 20px 20px;
     border-radius: 15px;
@@ -244,13 +269,14 @@ body {
 }
 .side-content > div > p {
     text-align: center;
+    color:grey;
     font-size: small;
     font-weight: 500;
     
 }
 .side-content > div > h3 > a {
     text-decoration: none;
-    color: var(--cor-sec);
+    color: var(--cor-ter);
 }
 .side-content > div > h3 > a:hover {
     text-decoration: underline;
@@ -268,10 +294,10 @@ body {
     padding: 5px 10px;
     border-radius: 20px;
     font-weight:600;
-    background-color: var(--cor-qui);
+    /* background-color: var(--cor-pri); */
 }
 .num-curtida {
-    color: var(--cor-qua);
+    color: var(--cor-ter);
 }
 .num-tempo {
     color: var(--cor-sec);
@@ -306,11 +332,11 @@ body {
 .card {
     flex: 1 1 calc(50% - 20px); 
     max-width: 300px; 
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--cor-ses);
+    border: 1px solid var(--cor-qua);
     border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(var(--cor-qui-rgb), 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -338,7 +364,7 @@ body {
     justify-content: space-between;
     width: 100%;
     font-size: 0.9rem;
-    color: #555;
+    /* color: #555; */
 }
 
 .card .info span {
@@ -353,8 +379,11 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--cor-pri);
-    padding: 20px;
+    background-color: var(--cor-qua);
+    color: black;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .footer-main h3 {
     color: var(--cor-sec);
@@ -372,16 +401,19 @@ body {
 .footer-content div {
     font-size: 11px;
     margin-right: 2%;
-    margin-top: 3%;
+    margin-top: 5%;
     border-right: 2px solid var(--cor-sec);
     padding-right: 20px;
 }
 .footer-content div > h4 {
     color: var(--cor-sec);
-    margin-bottom: 1%;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 2%;
 }
 .footer-content div > p {
     text-align: left;
+    font-weight: 500;
 }
 
 /*Pagina de receita*/
