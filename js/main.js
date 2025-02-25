@@ -49,6 +49,15 @@ function trocaTabAtivaPagPerfil() {
         this.classList.add("active");
         document.getElementById(this.dataset.tab).classList.add("active");
     });
+  });
+}
+function trocaCoracao() {
+  document.querySelectorAll(".botao-curtida").forEach(heart => {
+    heart.addEventListener("click", () => {
+        heart.classList.toggle("fa-regular"); // Remove a versão de contorno
+        heart.classList.toggle("fa-solid");   // Adiciona a versão preenchida
+        heart.classList.toggle("curtida");      // Aplica a animação
+    });
 });
 }
   // Chamada de funcoes de redirecionamento
@@ -58,4 +67,5 @@ function trocaTabAtivaPagPerfil() {
   adicionarRedirecionamentoHomepage();
 
 
-  trocaTabAtivaPagPerfil()
+  trocaTabAtivaPagPerfil();
+  trocaCoracao();
