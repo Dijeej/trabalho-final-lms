@@ -47,14 +47,14 @@
                 padding-right: 300px;
             } */
         </style>
-        <title>Perfil - Nome da Página</title>
+        <title>Perfil - NutriFácil</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header class="header-main">
-            <h1 class="homepage">Nome da Página</h1>
+            <h1 class="homepage">NutriFácil</h1>
             <form id="form-pesquisa" action="lista_receitas.html" method="GET">
                 <input type="text" class="barra-pesquisa" id="input-pesquisa" name="pesquisa" placeholder="Pesquise uma receita...">
                 <button type="submit" class="btn-pesquisa"><i class="fas fa-search"></i></button>
@@ -76,30 +76,87 @@
             </div>
         </header>
         
-        <main>
-            <h2>Nome do Usuário</h2>
+        <main class="main-content perfil-content">
+            <h2>Sandro dos Santos</h2>
             <div class="perfil-container">
-                <div class="perfil-imagem">
-                    <img class="img-perfil" src="img/profile.jpg" alt="Imagem do Perfil" onerror="this.src='img/profile-placeholder-f.jpg'" >
+                <div card class="card perfil-imagem">
+                    <img class="img-perfil" src="img/Sterling-K-Brown.jpg" alt="Imagem do Perfil" onerror="this.src='img/profile-placeholder-f.jpg'" >
                 </div>
-                <div class="profile-info">
-                    <p><strong>Email:</strong> usuario@email.com</p>
-                    <p><strong>Idade:</strong> 25 anos</p>
-                    <p><strong>Gênero:</strong> Masculino</p>
-                </div>
-                <div class="profile-bio">
-                    <h3>Bio</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula...</p>
+                <div class="perfil-box">
+                    <div class="perfil-info">
+                        <ul>
+                            <li><strong>E-mail</strong> ⎯ sandrosilva@email.com</li>
+                            <li><strong>Idade</strong> ⎯ 48 anos</li>
+                            <li><strong>Gênero</strong> ⎯ Masculino</li>
+                        </ul>
+                    </div>
+                    <div class="perfil-bio">
+                        <h3>Bio</h3>
+                        <p>Cozinhar sempre foi uma paixão para mim, mas o que realmente me motiva é encontrar maneiras de fazer pratos saudáveis sem gastar muito. Acredito que comer bem não precisa ser complicado nem caro, e adoro testar combinações simples que tragam sabor e nutrição ao mesmo tempo. Sempre que estou na cozinha, busco transformar ingredientes acessíveis em receitas práticas e gostosas, mostrando que uma alimentação equilibrada pode estar ao alcance de todos. Para mim, cozinhar é mais do que preparar refeições – é um jeito de cuidar da minha saúde e compartilhar bons momentos com as pessoas ao meu redor.</p>
+                    </div>
                 </div>
             </div>
-            <nav class="profile-nav">
+            <nav class="perfil-nav">
                 <ul>
-                    <li><a href="#">Minhas Receitas</a></li>
-                    <li><a href="#">Receitas Curtidas</a></li>
-                    <li><a href="#">Comentários</a></li>
-                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#" class="tab-link active" data-tab="receitas">Minhas Receitas</a></li>
+                    <li><a href="#" class="tab-link" data-tab="curtidas">Receitas Curtidas</a></li>
+                    <li><a href="#" class="tab-link" data-tab="comentarios">Comentários</a></li>
+                    <li><a href="#" class="tab-link" data-tab="fotos">Fotos</a></li>
                 </ul>
             </nav>
+            <div id="receitas" class="tab-content active">
+                <h2>Minhas Receitas</h2>
+                <div>
+                    <h3><a href="receita.html">Estrogonofe Light de Frango </a></h3>
+                    <p>Peito de Frango • Iourgute Natural • Cebola • Alho</p>
+                    <div class="info-receita">
+                        <span class="num-curtida"><i class="fas fa-heart"></i> 150</span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 30 min</span>
+                    </div>
+                </div>
+                <div>
+                    <h3><a href="receita.html">Bolo de Tapioca</a></h3>
+                    <p>Tapioca Granulada • Leite Condensado Light • Leite de Coco</p>
+                    <div class="info-receita">
+                        <span class="num-curtida"><i class="fas fa-heart"></i> 200</span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 40 min</span>
+                    </div>
+                </div>
+            </div>
+            <div id="curtidas" class="tab-content">
+                <h2>Receitas Curtidas</h2>
+                <div>
+                    <h3><a href="receita.html">Empadão de Grão de Bico</a></h3>
+                    <p>Tapioca Granulada • Leite Condensado Light • Leite de Coco</p>
+                    <div class="info-receita">
+                        <span class="num-curtida"><i class="fas fa-heart"></i></span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 2h 30 min</span>
+                    </div>
+                </div>
+                <div>
+                    <h3><a href="receita.html">Omelete de talos e ramas</a></h3>
+                    <p>Grão de bico • Frango • Palmito • Alho</p>
+                    <div class="info-receita">
+                        <span class="num-curtida"><i class="fas fa-heart"></i></span>
+                        <span class="num-tempo"><i class="fas fa-clock"></i> 25 min</span>
+                    </div>
+                </div>
+            </div>
+            <div id="comentarios" class="tab-content comentarios">
+                <h2>Comentários</h2>
+                <p>Nenhum comentário no memoento</p>
+            </div>
+            <div id="fotos" class="tab-content">
+                <!-- <div class="card-container"> -->
+                    <h2>Fotos</h2>
+                    <div class="card card-foto-perfil">
+                        <img src="img/bolo-tapioca.jpg"/>
+                    </div>
+                    <div class="card card-foto-perfil">
+                        <img src="img/estrogonofe-frango.jpg"/>
+                    </div>
+                <!-- </div> -->
+            </div>
         </main>
         <footer class="footer-main">
             <h3>Nos Conheça Melhor</h3>
