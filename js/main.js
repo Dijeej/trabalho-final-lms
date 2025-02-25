@@ -16,6 +16,7 @@ function adicionarRedirecionamentoImg() {
 
     // Adiciona um evento de clique para cada uma delas
     imagens.forEach(function(imagem) {
+      imagem.style.cursor = "pointer";
       imagem.onclick = function() {
         window.location.href = "receita.html";  // Redireciona para a página
       };
